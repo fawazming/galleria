@@ -11,7 +11,9 @@ class Home extends BaseController
     public function index($key)
     {
         $res = Hi($key);
-        return $this->respond($res, 200, 'Do append with preferred size =w250-h250');
+        // $response->
+        return $this->response->setHeader('Access-Control-Allow-Origin', '*')->setJSON($res);
+        // return $this->respond($res, 200, 'Do append with preferred size =w250-h250');
         // echo view('header');
         // echo Hi();
 
